@@ -1,0 +1,170 @@
+body{
+    background-color: #fef8ef;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive
+}
+
+header { 
+    margin: 60px 200px 60px 200px; 
+}
+
+#title {
+    float: left;
+    color: #8e877b;
+    font-size: 12pt;
+}
+
+#logo {
+    float: left;
+    color: #8e877b;
+    margin-left: 390px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: #8e877b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+li a:hover {
+    background-color: #58554d;
+    color:white;
+    border-radius: 30px;
+}
+
+main{
+    margin: 60px 200px 60px 200px; 
+
+}
+
+main h1{
+    text-align: center;
+    font-size: 30pt;
+    color:#3d3b36;
+}
+
+#desc{
+    text-align: center;
+    font-size:15pt;
+    color:#3d3b36;
+    
+}
+
+#main-button{
+    text-align: center;
+}
+
+button{
+    background-color: transparent;
+    border-style: solid;
+    color:#ef8759;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive
+}
+
+#main-button button{
+    border: 5px solid #ef8759;
+    border-radius: 20px;
+    height: 60x;
+    font-size: 16pt;
+    padding: 10px 20px;
+}
+
+button:hover{
+    background-color: #ef8759;
+    color: white;
+}
+
+button:active{
+    background-color: lightcoral;
+    transform: translateY(2px);
+}
+
+.main-title{
+    text-align: center;
+}
+
+.main-content{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 600px 580px;
+}
+
+.main-title{
+    grid-column: 1/ span 2;
+    font-size: 18pt;
+}
+
+.main-image{
+    text-align: center;
+}
+
+.main-info{
+    grid-column: 1/ span 2;
+    margin-left: 100px;
+    font-size: 12pt;
+}
+
+.equation {
+    text-align: center;
+    color:#3d3b36;
+    font-weight: bold;
+    font-size: 16pt;
+    border: 2px solid #ef8759;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main-content >div{
+    padding: 10px;
+}
+
+.form-button button{
+    margin-top: 15px;
+    border: 2px solid #ef8759;
+    border-radius: 10px;
+    height: 30x;
+    font-size: 12pt;
+    padding: 10px 20px;
+}
+
+.side-label{
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input-form {
+    margin-top: 10px;
+    outline: none;
+    border-radius: 4px;
+    border: solid pink;
+    padding: 10px;
+    width: 160px;
+    margin-bottom: 10px;
+}
+
+.input-form:focus {
+    border: solid aqua;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+}
+
+
