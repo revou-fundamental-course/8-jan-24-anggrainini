@@ -10,12 +10,12 @@
     <header>
         <p id="title">Kakulator Matematik</p>
         <div id="logo">
-            <img src="assets/calculator-logo.png" width="60px" height="60px" alt="calculator-logo">
+            <img src="assets/calculator-logo.png" alt="calculator-logo">
         </div>
         <nav>
         <ul>
-            <li style="float:right"><a>Keliling Persegi</a></li>
-            <li style="float:right"><a>Luas Persegi</a></li>
+            <li style="float:right"><a onclick="showLuas()">Luas Persegi</a></li>
+            <li style="float:right"><a onclick="showKeliling()">Keliling Persegi</a></li>
         </ul>
     </nav>
     </header>
@@ -26,73 +26,82 @@
         <br>Mau hitung apa? &#129299;
         </p>
         <div id="main-button">
-            <button id="button-luas">Luas Persegi</button>
-            <button id="button-keliling">Keliling Persegi</button>
+            <button onclick="showLuas()" id="button-luas">Luas Persegi</button>
+            <button onclick="showKeliling()" id="button-keliling">Keliling Persegi</button>
         </div>
-        <div class="luas-persegi">
+
+        <div id="luas-persegi">
             <div class="main-content">
                 <div class="main-title">
                     <p>&#10024; LUAS PERSEGI &#10024;</p>
                 </div>
-                <div class="main-image">
-                    <img src="assets/square.gif" alt="">
-                </div>
-                <div class="main-form">
-                    <p>Hitung Luas Persegi :</p>
-                    <div class="input-section">
-                        <label for="side-label" class="side-label">Sisi (a) : </label><br>
-                        <input type="number" class="input-form" value="masukan angka disini" id="square-side-luas">
+                <div class="main-flex-container">
+                    <div class="main-image">
+                        <img src="assets/square.gif" alt="">
                     </div>
-                    <div class="form-button">
-                        <button class="countButton" id="hitung-luas">Hitung</button>
-                        <button class="resetButton" id="reset-luas">Reset</button>
-                    </div>
-                    <div class="form-result">
-                        <p>Hasil : </p>
-                        <p id="hasil-luas"></p>
+                    <div class="main-form">
+                        <p>&#10024;Hitung Luas Persegi :</p>
+                        <div class="input-section">
+                            <label for="side-label" class="side-label">Sisi (a) : </label><br>
+                            <input type="number" class="input-form" placeholder="masukan angka disini" id="square-side-luas">
+                        </div>
+                        <p class="alert-warning" id="alert-error-luas"></p>
+                        <div class="form-button">
+                            <button class="countButton" id="hitung-luas">Hitung</button>
+                            <button class="resetButton" id="reset-luas">Reset</button>
+                        </div>
+                        <div class="form-result">
+                            <p>Hasil : </p>
+                            <p id="hasil-luas"></p>
+                        </div>
                     </div>
                 </div>
                 <div class="main-info">
                     <p>&#10024; Rumus Luas Persegi yaitu :</p>
                     <p class="equation">L = S x S</p>
                     <p>&#10024; Dimana :</p>
-                    <p>L : Luas</p>
-                    <p>S : Sisi</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;L : Luas</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;S : Sisi</p>
                 </div>
             </div>
         </div>
+        
         <div id="keliling-persegi">
             <div class="main-content">
             <div class="main-title">
                 <p>&#10024; KELILING PERSEGI &#10024;</p>
             </div>
-            <div class="main-image">
-                <img src="assets/square.gif" alt="">
-            </div>
-            <div class="main-form">
-                <p>Hitung Keliling Persegi :</p>
-                <div class="input-section">
-                    <label for="side-label" class="side-label">Sisi (a) : </label><br>
-                    <input type="number" class="input-form" value="masukan angka disini" id="square-side-keliling">
+            <div class="main-flex-container">
+                <div class="main-image">
+                    <img src="assets/square.gif" alt="">
                 </div>
-                <div class="form-button">
-                    <button class="countButton" id="hitung-keliling">Hitung</button>
-                    <button class="resetButton" id="reset-keliling">Reset</button>
-                </div>
-                <div class="form-result">
-                    <p>Hasil : </p>
-                    <p id="hasil-keliling"></p>
+                <div class="main-form">
+                    <p>&#10024;Hitung Keliling Persegi :</p>
+                    <div class="input-section">
+                        <label for="side-label" class="side-label">Sisi (a) : </label><br>
+                        <input type="number" class="input-form" placeholder="masukan angka disini" id="square-side-keliling"><br>
+                    </div>
+                    <p class="alert-warning" id="alert-error-keliling"></p>
+                    <div class="form-button">
+                        <button class="countButton" id="hitung-keliling">Hitung</button>
+                        <button class="resetButton" id="reset-keliling">Reset</button>
+                    </div>
+                    <div class="form-result">
+                        <p>Hasil : </p>
+                        <p id="hasil-keliling"></p>
+                    </div>
                 </div>
             </div>
             <div class="main-info">
                 <p>&#10024; Rumus Keliling Persegi yaitu :</p>
                 <p class="equation">K = 4 x S</p>
                 <p>&#10024; Dimana :</p>
-                <p>K : Keliling</p>
-                <p>S : Sisi</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; K : Keliling</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; S : Sisi</p>
             </div>
             </div>
         </div>
     </main>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

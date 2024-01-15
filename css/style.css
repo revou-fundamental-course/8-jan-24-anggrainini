@@ -1,23 +1,31 @@
 body{
     background-color: #fef8ef;
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 120px 40px 120px; 
 }
 
 header { 
-    margin: 60px 200px 60px 200px; 
+    display: flex;
+    padding: 10px;
+    justify-content:space-between;
 }
 
 #title {
-    float: left;
     color: #8e877b;
     font-size: 12pt;
+    width: 240px;
 }
 
 #logo {
-    float: left;
+    text-align: center;
     color: #8e877b;
-    margin-left: 390px;
+}
 
+#logo img{
+    display: block;
+    width : 65px;
 }
 
 ul {
@@ -25,6 +33,10 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+nav {
+    float: right;
 }
 
 li {
@@ -46,10 +58,6 @@ li a:hover {
     border-radius: 30px;
 }
 
-main{
-    margin: 60px 200px 60px 200px; 
-
-}
 
 main h1{
     text-align: center;
@@ -100,33 +108,43 @@ button:active{
 
 .main-content{
     margin-top: 10px;
-    display: grid;
-    grid-template-columns: 600px 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-flex-container{
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-evenly;
 }
 
 .main-title{
-    grid-column: 1/ span 2;
     font-size: 18pt;
 }
 
 .main-image{
-    text-align: center;
+    margin: 60px; 
+}
+
+.main-form{
+    margin: auto;
+    padding : 70px;
 }
 
 .main-info{
-    grid-column: 1/ span 2;
-    margin-left: 100px;
     font-size: 12pt;
 }
 
 .equation {
-    text-align: center;
     color:#3d3b36;
     font-weight: bold;
     font-size: 16pt;
     border: 2px solid #ef8759;
     border-radius: 10px;
     padding: 10px;
+    width:200px;
+    margin:auto;
+    text-align: center;
 }
 
 .main-content >div{
@@ -167,4 +185,12 @@ button:active{
     flex-direction: row;
 }
 
+.alert-warning{
+    font-size:12px;
+    color:red;
+}
+
+div#keliling-persegi {    
+    display:none;
+}
 
