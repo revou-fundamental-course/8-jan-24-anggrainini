@@ -52,6 +52,26 @@ function validateSisi(type){
     return true;
 }
 
+
+function validateNumber(type) {
+    var regrexPattern = /^[0-9]+(\.[0-9]+)?$/;
+
+    if(type == 'luas'){
+        if(!regrexPattern.test(sideSquareLuas.value)){
+            alertErrorLuas.innerHTML = 'Masukan valid number (angka / desimal dengan . (titik))';
+            return false;
+        }
+    }else{
+        if(!regrexPattern.test(sideSquareKeliling.value)){
+            alertErrorKeliling.innerHTML = 'Masukan valid number (angka / desimal dengan . (titik))';
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
 /**
  * Function to show result of calculation based on type
  * @param {string} type 
@@ -88,20 +108,24 @@ function resetAll(type){
 function calculate(type){
     if(type == 'luas'){
         let sisi = sideSquareLuas.value;
-        return parseFloat(sisi) * parseFloat(sisi);
+        return parseFloat(parseFloat(sisi) * parseFloat(sisi)).toFixed(2);
     }else{
         let sisi = sideSquareKeliling.value;
-        return 4 * parseFloat(sisi);
+        return parseFloat(4 * parseFloat(sisi)).toFixed(2);
     }
 }
 
 
 btnHitungLuas.addEventListener("click", function(){
     let isValidSisi  = validateSisi('luas');
-    if(isValidSisi){
+    let isValidNumber = validateNumber('luas');
+
+    if(isValidSisi && isValidNumber){
         alertErrorLuas.innerHTML = '';
         let result = calculate('luas');
         showResult('luas', result)
+    }else{
+        showResult('luas', '');
     }
 });
 
@@ -111,10 +135,13 @@ btnResetLuas.addEventListener("click", function(){
 
 btnHitungKeliling.addEventListener("click", function(){
     let isValidSisi  = validateSisi('keliling');
-    if(isValidSisi ){
+    let isValidNumber = validateNumber('keliling');
+    if(isValidSisi && isValidNumber){
         alertErrorKeliling.innerHTML = '';
         let result = calculate('keliling');
         showResult('keliling', result)
+    }else{
+        showResult('keliling', '');
     }
 });
 
