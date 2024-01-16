@@ -196,3 +196,125 @@ div#keliling-persegi {
     display:none;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+    
+    #logo{
+        display:none;
+    }
+
+    #title{
+        display:none;
+    }
+
+    nav{
+        display:none;
+    }
+
+    main h1{
+        text-align: center;
+        font-size: 20pt;
+        color:#3d3b36;
+    }
+    
+    #desc{
+        text-align: center;
+        font-size:10pt;
+        color:#3d3b36;
+        
+    }
+    
+
+    body {
+        margin: 30px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    #title {
+        width: 100%;
+    }
+
+    .main-title{
+        font-size: 12pt;
+    }
+
+    li {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    li a {
+        padding: 10px;
+    }
+
+    .main-flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-form{
+        padding : 20px;
+        margin: auto;
+    }
+
+    .main-image{
+        margin: auto; 
+    }
+
+    .main-image img{
+        width:200px;
+    }
+
+    .input-section {
+        display: block;
+    }
+    
+    .form-button{
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        margin: 30px;
+    }
+
+    .main-flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-form{
+        padding : 20px;
+        margin: auto;
+    }
+
+    .main-image{
+        margin: auto; 
+    }
+
+    .main-image img{
+        width:200px;
+    }
+
+    .input-section {
+        display: block;
+    }
+    
+    .form-button{
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    body {
+        margin: 40px;
+    }
+}
+
